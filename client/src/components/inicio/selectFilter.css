@@ -1,0 +1,87 @@
+.Select-contener{
+  position: relative;
+  display: felx;
+  justify-content: center;
+  align-items: center;
+  top:70px;
+  width:300px;
+  min-height:150px;
+}
+
+.Select-item li{
+  position: absolute;
+  list-style: none;
+  left:-0px;
+  transform-origin: 90px;
+  transition: 0.5s;
+  transition-delay: calc(5ms*var(--i));
+  transform:rotate(0deg) translateX(100px)
+}
+.Select-contener .Active li{
+  left:100px;
+  transform:rotate(calc(360deg / 20 * var(--i)))
+}
+
+.Select-item{
+  position: absolute;
+  display:felx;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1.25s;
+}
+.Select-img{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height: 100px;
+  width: 100%;
+  transition: all 1.4s;
+}
+
+.Select-img img{
+  cursor: pointer;
+  position: relative;
+  left: 40px;
+  z-index: 2;
+  width: 25%;
+  border-radius: 100%;
+  box-shadow: 0 0 5px rgb(129, 129, 129);
+  transition: all 0.5s;
+}
+.text-none{
+  padding:5px 1px;
+  font-family:Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  width: 140px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 50px;
+  background-color:hsl(103, 100%, 74%);
+  font-size: 16px;
+  transition: all 0.3s; 
+}
+.text-Act{
+  overflow: hidden;
+  transition: all 0.3s; 
+  width: 0px;
+  font-size: 1px;
+}
+
+
+#Active{
+  transform: rotate(360deg)
+}
+.type_selecionado{
+  display:flex;
+  position: relative;
+  top: 80px;
+}
+.type_selecionado p{
+  cursor: pointer;
+  color: #fff;
+  margin:5px;
+  padding:5px;
+  text-align: center;
+  border-radius:10px;
+  background-color: #1bab64;
+}
